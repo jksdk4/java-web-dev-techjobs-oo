@@ -91,4 +91,17 @@ public class Job {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+
+
+        return
+                "ID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + positionType +
+                "\nCore Competency: " + coreCompetency;
+    }
 }
