@@ -94,7 +94,7 @@ public class Job {
 
     @Override
     public String toString() {
-        if (getName() == null || getEmployer() == null|| getLocation() == null || getPositionType() == null || getCoreCompetency() == null){
+        if (getName() == null && getEmployer() == null && getLocation() == null && getPositionType() == null && getCoreCompetency() == null){
             return "OOPS! This job does not seem to exist.";
         } else {
             return "\n" +
