@@ -94,14 +94,17 @@ public class Job {
 
     @Override
     public String toString() {
-
-
-        return
-                "ID: " + id +
-                "\nName: " + name +
-                "\nEmployer: " + employer +
-                "\nLocation: " + location +
-                "\nPosition Type: " + positionType +
-                "\nCore Competency: " + coreCompetency;
+        if (getName() == null || getEmployer() == null|| getLocation() == null || getPositionType() == null || getCoreCompetency() == null){
+            return "OOPS! This job does not seem to exist.";
+        } else {
+            return "\n" +
+                    "ID: " + getId() +
+                    "\nName: " + ((getName() != null && getName() != "") ? getName() : "No data available.") +
+                    "\nEmployer: " + ((getEmployer().toString() != null && getEmployer().toString() != "") ? getEmployer() : "No data available.") +
+                    "\nLocation: " + ((getLocation().toString() != null && getLocation().toString() != "") ? getLocation() : "No data available.") +
+                    "\nPosition Type: " + ((getPositionType().toString() != null && getPositionType().toString() != "") ? getPositionType() : "No data available.") +
+                    "\nCore Competency: " + ((getCoreCompetency().toString() != null && getCoreCompetency().toString() != "") ? getCoreCompetency() : "No data available.") +
+                    "\n";
+        }
     }
 }
